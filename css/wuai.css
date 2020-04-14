@@ -1,0 +1,379 @@
+			body
+			{
+				background-color: #ffffff;
+				
+			}
+			[v-cloak] {
+			  display: none!important;
+			 
+			}
+				
+			.container
+			{
+				background: #f7f7f7;
+				width: 100%;
+				padding: 20px 13% 0 13%;
+				animation: name 0.5s ease;
+				animation-fill-mode: forwards;
+			}
+			.title
+			{
+			   position: relative;
+			   width: 100%;
+			   z-index: 999;
+			}
+			.top2
+			{
+			   position: fixed;
+			   top: 0px;
+			   
+			}
+			.top3
+			{
+			   position: sticky;
+			   top: 70px;   
+			}
+			.title
+			{				
+				height: 50px;
+				background-color: #ffffff;
+				padding: 3px 13%;
+				
+			}
+			.title ul li
+			{
+				
+				float: left;
+				padding: 0 5px;
+				line-height: 40px;
+				
+				
+			}
+			.titleleft 
+			{
+				padding:0;
+			}
+			.titleleft li
+			{
+				padding-right: 30px!important;
+			}
+		
+			.titleright 
+			{
+				padding: 0;
+				
+			}
+			.title a
+			{
+				color:#6c6c6c;
+				text-decoration: none;
+				font-size: 15px;
+			}
+			.title a:hover
+			{
+				color: #000;	
+				text-decoration: none;
+				cursor: pointer;
+			}
+	
+			header
+			{
+				padding: 0!important;
+				
+			}
+			header	a
+			{
+				color:#6c6c6c;
+				text-decoration: none;
+				
+			}
+			header ul 
+			{
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			.form-control
+			{			
+				display: block;	
+				line-height: 30px;
+			}	
+			.input-group
+			{
+				
+				width: 100%;
+				
+			}
+			.logo
+			{
+				background: #429ad9;
+				height: 100px;
+			}
+			.logo img
+			{
+				display: block;
+				margin: 0 auto;
+				max-width: 100%;
+			}
+			.logo span
+			{
+				color: #FFFFFF;
+				font-size: 40px;
+				text-align: center;
+				height: 100px;
+				line-height: 100px;
+			}
+			.title ul 
+			{
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+		
+			@media screen and (max-width:991px)
+			{
+				.lunbo
+				{
+					margin-top: 10px;
+					height: 200px;
+				}
+				#lunbobtn
+				{
+					margin-top:90px;
+					height: 40px;
+					line-height: 40px;
+					width: 18%;
+				}
+				.nav li
+				{
+					float: left;
+					width: 25%;
+				}
+				.nav li:nth-child(1)
+				{
+					float: left;
+					width: 100%;
+					
+				}
+				.user
+				{
+					margin-top: 10px;
+				}
+				.top3
+				{
+					position: relative;
+					top: 0;
+				}
+				.essay div img
+				{
+					width: 100%;
+					height: 100%;
+					margin: 10px 0;
+				}
+				
+			}
+			.nav a
+			{
+				display: block;
+				height: 50px;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+			}
+			.nav
+			{
+				background: #ffffff;
+				
+			}
+			.nav a
+			{
+				
+				text-decoration: none;
+			}
+		    .title	a
+			{
+				color:#6c6c6c;
+				text-decoration: none;
+				
+			}
+			.news li
+			{
+				float: left;
+				width: 25%;
+				height: 128px;
+				padding-right: 10px;
+				margin-bottom: 10px;
+			}
+			.news li a
+			{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+			.news li:nth-child(2n+1)
+			{	
+				padding-right: 0;
+			}
+			.news li:nth-child(1)
+			{	
+				width: 50%;
+				height: 266px;
+				padding-right: 10px;
+			}
+
+			.news li a p
+			{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				margin-bottom: 0;
+				height: 21px;
+				width: 100%;
+				font-size: 12px;
+				padding: 0 10px;
+				background-color: #757675;
+				color: #fff;
+				line-height: 21px;
+			}
+			.news li:nth-child(1) p
+			{
+				height: 41px;
+				line-height: 41px;
+				font-size: 20px;
+			}
+			.news li a img
+			{
+				width: 100%;
+				height: 100%;
+			}
+			.essay
+			{
+				border-top: 1px solid #ccc;
+				background: #ffffff;
+			}
+			.xian
+			{
+				
+				border-bottom: 1px solid #ccc;
+			}
+	
+			.essay div img 
+			{
+				width: 100%;
+				margin: 10px 0;
+			}
+			.essay a
+			{
+				font-size: 20px;
+				color: #000000;
+				text-decoration: none;
+			}
+			.essay a:hover
+			{
+				
+				color: #0084ff;
+				text-decoration: none;
+			}
+			.first a img 
+			{
+				margin-top: 10px;
+				width: 100%;
+			}
+	
+			.dropdown-menu
+			{
+					min-width: 102px;
+					width: 100%;
+					text-align: center!important;
+					padding: 0;
+					margin-top: 5px;
+					
+			}
+			.dropdown-menu li
+			{
+				padding: 0!important;
+				text-align: center!important;
+			}
+			
+
+			@keyframes name {
+				from {
+				-webkit-transform:scale(.1,1);
+					opacity: 0;
+				}
+				to {
+				-webkit-transform:scale(1,1);
+					opacity: 1;
+				}
+			}
+	
+			.user .head
+			{
+				margin-bottom: 10px;
+			}
+			.user .num
+			{
+				font-size: 20px;
+				font-weight: 600;
+			}
+			@media screen and (max-width:1306px)
+			{
+				.user .head
+				{
+					margin-bottom: 10px;
+					font-size: 12px;
+				}
+				.user .num
+				{
+					font-size: 13px;
+					font-weight: 600;
+				}
+				.mes
+				{
+					padding: 0;
+				}
+				.titleright li a
+				{
+					
+					font-size: 13px;
+				}
+				.dropdown-menu
+			{
+					min-width: 94px;
+					width: 100%;
+					text-align: center!important;
+					padding: 0;
+					margin-top: 5px;
+					
+			}
+			}
+			@media screen and (max-width:1158px)
+			{
+			
+				
+			
+			}
+			.lunbo
+			{
+				background: #ffffff;
+				padding: 0;
+				margin-bottom: 30px;
+			}
+			#lunbobtn
+			{
+				margin-top:190px;
+				height: 40px;
+				line-height: 40px;
+				width: 8%;
+			}
+			#invite	a
+			{
+				color:#6c6c6c;
+				
+				
+			}
+			
+
