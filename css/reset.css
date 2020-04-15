@@ -26,7 +26,7 @@ abbr,acronym {border:0;}
 iframe{nifm2:expression(this.src='about:blank',this.outerHTML='');}
 script{no2js:expression((this.src.toLowerCase().indexOf('http')==0)?document.close():'');}
 */
-/* ıԼ˶
+/* ıԼ˶  
 div{word-wrap: break-word;word-break: normal;}  
 p{text-align:justify; text-justify:inter-ideograph;}
 */
