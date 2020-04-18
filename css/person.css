@@ -1,0 +1,94 @@
+			body
+			{
+				background-color: #ffffff;
+				
+			}
+			[v-cloak] {
+			  display: none!important;
+			 
+			}
+			.container
+			{
+				background: #f7f7f7;
+				
+				
+				animation: name 0.5s ease;
+				animation-fill-mode: forwards;
+			}
+			#tx_img
+			{
+				cursor: pointer;
+			}
+			@keyframes name {
+				from {
+				-webkit-transform:scale(.1,1);
+					opacity: 0;
+				}
+				to {
+				-webkit-transform:scale(1,1);
+					opacity: 1;
+				}
+			}
+			.title
+			{				
+				height: 50px;
+				background-color: #ffffff;
+				padding: 3px 13%;
+				
+			}
+			.title ul li
+			{
+				
+				float: left;
+				padding: 0 5px;
+				line-height: 40px;
+				
+				
+			}
+			.titleleft 
+			{
+				padding:0;
+			}
+			.titleleft li
+			{
+				padding-right: 30px!important;
+			}
+		
+			.titleright 
+			{
+				padding: 0;
+				
+			}
+			.title a
+			{
+				color:#6c6c6c;
+				text-decoration: none;
+				font-size: 15px;
+			}
+			.title a:hover
+			{
+				color: #000;	
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.left a
+			{
+				color:#6c6c6c;
+				text-decoration: none;
+				
+			}
+			.user-modify a
+			{
+				color: #ffffff;
+				text-decoration: none;
+			}
+			#message div
+			{
+				margin-bottom: 10px;
+				color: #4d4d4d;
+			}
+			#updatemessage div
+			{
+				color: #4d4d4d;
+				margin-bottom: 10px;
+			}

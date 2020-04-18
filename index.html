@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>吾爱学习社区</title>
+       
+    </head>
+	
+  		<script src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/js/jquery.min.js"></script>
+  		<script src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/js/jquery.cookie.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WendyBoys/oss/css/bootstrap.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WendyBoys/oss/css/bootstrap-theme.css" />
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WendyBoys/oss/css/wuai.css" />
+		<script src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/js/vue.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/js/axios.min.js"></script>
+
+    <body>
+  			<div id="app" v-cloak >
+    				<div class="title hidden-sm hidden-xs"  >	
+						<div>
+								<span class="col-md-6 titleleft">
+								<ul>
+								<li><a href="index.html">首页</a></li>
+								<li><a>暂未开放</a></li>
+								</ul>
+								</span>
+							
+								<span class="col-md-3">
+							
+								</span>
+								<span class="col-md-3 titleright ">
+								<ul class="pull-right">
+									
+								<li><a>暂未开放</a></li>				
+								<li ><a :href="isLogin?'send.html':'login.html'">发表文章</a></li>
+								<li v-show="isLogin"  id="icon" v-cloak>									
+									<div class="btn-group">
+									<span data-toggle="dropdown" >
+										<img  class="img-circle"  src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/img/icon.jpg" width="35px" height="35px"/>
+										</span>
+										<ul class="dropdown-menu" id="menu" role="menu">
+										<li><a href="#">暂未开放</a></li>
+										<li><a href="#">暂未开放</a></li>
+										<li><a href="#">暂未开放</a></li>
+										
+										<li><a v-on:click="logout">注销登录</a></li>
+										</ul>
+								</div>
+									
+									</li>
+								<ul>
+								</span>
+							
+						</div>
+					</div>
+					
+    
+    
+			<div class="container">	
+				<div id="kuai">
+
+			
+			<div class="row">
+			<div id="rightDaoHang">
+			<header class="col-md-2" >
+		<div class="logo visible-xs visible-sm">
+				
+						
+						<span class="visible-xs visible-sm">吾爱学习网</span>
+					
+				</div>		
+		
+				<div class="nav">
+					<ul style="margin: 10px 10px 10px;">
+						<li style="background: #0084ff;border-radius: 5px;"><a href="https://www.baidu.com" style="color: #ffffff;">推荐</a></li>
+						<li ><a href="https://www.baidu.com">百度一下</a></li>
+						<li><a href="https://www.baidu.com">百度一下</a></li>
+						<li><a href="https://www.baidu.com">百度一下</a></li>
+						<li><a href="https://www.baidu.com">百度一下</a></li>
+						<li><a href="https://www.baidu.com">百度一下</a></li>
+						<li><a href="https://www.baidu.com">百度一下</a></li>
+						<li><a href="https://www.baidu.com">百度一下</a></li>
+						<li><a href="https://www.baidu.com">百度一下</a></li>
+						
+					</ul>
+				</div>
+				<div id="goTop" style="text-align: center;cursor: pointer;font-size: 15px;margin-top: 10px;" class="hidden-sm hidden-xs">
+					<div>∧</div>
+					<div style="margin-top: -7px;">Top</div>
+				
+				</div>
+			</header>
+			</div>
+			<article class="col-md-7" >
+			<div class="col-md-12 lunbo">
+			
+				<div id="imgs" data-interval="2000" data-ride="carousel" class="carousel slide" >
+				
+				<div class="carousel-inner">
+				
+				<div class="item active">
+				
+				<a><img src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/img/one.jpg" style="width: 100%;height: 400px;"></a>
+				
+				</div>
+				
+				<div class="item">
+				
+				<img src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/img/two.jpg" style="width: 100%;height: 400px;">
+				
+				</div>
+				
+					<div class="item">
+				
+				<img src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/img/three.jpg" style="width: 100%;height: 400px;">
+				
+				</div>
+				
+				<ul class="carousel-indicators">
+				
+				<li data-target="#imgs" data-slide-to="0" class="active"></li>
+				
+				<li data-target="#imgs" data-slide-to="1"></li>
+				
+				<li data-target="#imgs" data-slide-to="2"></li>
+							
+				</ul>
+				
+				</div>
+				
+				<a href="#imgs" id="lunbobtn" data-slide="prev" class="carousel-control left" ><</a>
+				
+				<a href="#imgs" id="lunbobtn" data-slide="next" class="carousel-control right" >></a>
+				
+				</div>
+			</div>
+			
+			<div class="essay col-md-12 ">
+				
+				<div  v-for="item in datas">
+				<div class="row" >
+					<div class="col-md-3">
+					<img  src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/img/winter.jpg" height="90px" />
+					</div>
+				<div class="col-md-9" style="padding: 10px;">
+					
+					<a v-text="item.title" v-bind:href="'essay.html?id='+item.id" ></a>
+					<div style="margin: 20px 10px 0 0;">
+						<span  v-text="item.tag" style="color: #67c23a;background: #e1f3d8;border-radius: 5px;padding: 2px;margin-right: 5px;" ></span>
+						<img src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/img/icon.jpg" class="img-circle" style="margin: 0; width: 6%;height: 6%;" />
+						
+						<span  v-text="item.author" style="color: #0084ff;" ></span>
+					<span class="text-muted" v-text="' 发布于 '+item.date">小小轩 发布于 2019-10-16</span>
+					
+					<span class="text-muted" v-text="'评论 '+item.talk" ></span>
+						
+					</div>
+					
+				</div>
+				
+				</div>
+				<div class="xian"></div>
+				</div>		
+			</div>		
+			<button class="btn btn-default" style="width: 100%;margin: 10px 0;" v-on:click="add">加载更多</button>
+
+			</article>
+			<aside class="col-md-3">
+				<div  class="row" style="border-radius: 5px; width: 100%;height: 100%; background: #ffffff;margin:0 0 20px 0;text-align: center;padding: 10px 0;">
+				<div v-cloak >
+				<div id="login" style="width: 100%; background: #ffffff;padding: 20px;margin-bottom: 20px;" v-if="!isLogin"  >
+						<p style="text-align: center;">登录以后您可以发表文章，提问题或解答问题，分享您的公众号、博客链接</p>
+						<a class="btn btn-danger" style="width: 70%;display:block;margin:0 auto" href="login.html">登录</a>
+					
+					</div>
+					</div>
+					<div v-cloak  >
+					<div class="user" v-if="isLogin">	
+						<img src="https://cdn.jsdelivr.net/gh/WendyBoys/oss/img/icon.jpg" class="img-circle" width="50%"  height="50%" style="margin: 20px 0 20px 0;"/>
+						<div style="font-size: 17px;margin:0 0 10px 0 ;" v-text="message">91轩先生为国争光</div>
+						<div class="col-md-4 mes">
+						<div class="head">文章</div>
+						<div class="num">18</div>				
+						</div>
+						
+						<div class="col-md-4 mes">
+						<div class="head">浏览量</div>
+						<div class="num">4321</div>
+						</div>
+						
+						<div class="col-md-4 mes">
+						<div class="head">点赞</div>
+						<div class="num">2921</div>
+						</div>
+					</div>
+					</div>
+					</div>
+					<div id="invite" style="width: 100%; background: #ffffff;padding: 5px;">
+						<div style="padding-left: 5px;font-size: 18px;margin-bottom: 10px;">邀请您来回答</div>
+						<a href="#" style="padding: 0 5px;margin-bottom: 5px;font-size: 13.5px;">不可取，有失公正？</a><br/>
+						<a href="#" style="padding: 0 5px;margin-bottom: 5px;font-size: 13.5px;">Spring使用@Transactional注解，导致事务失效？</a><br/>
+						<a href="#" style="padding: 0 5px;margin-bottom: 5px;font-size: 13.5px;">和视频上一样的代码 我啥我的会报错？这两句话有冲突吗 ？好像只能一个不报错</a><br/>
+						<a href="#" style="padding: 0 5px;margin-bottom: 5px;font-size: 13.5px;">和视频上一样的代码 我啥我的会报错？这两句话有冲突吗 ？好像只能一个不报错</a><br/>
+						<a href="#" style="padding: 0 5px;margin-bottom: 5px;font-size: 13.5px;">和视频上一样的代码 我啥我的会报错？这两句话有冲突吗 ？好像只能一个不报错</a><br/>
+						<a href="#" style="padding: 0 5px;margin-bottom: 5px;font-size: 13.5px;">和视频上一样的代码 我啥我的会报错？这两句话有冲突吗 ？好像只能一个不报错</a><br/>
+						<a href="#" style="padding: 0 5px;margin-bottom: 5px;font-size: 13.5px;">Spring使用@Transactional注解，导致事务失效？</a><br/>
+						<a href="#" style="padding: 0 5px;margin-bottom: 5px;font-size: 13.5px;">Spring使用@Transactional注解，导致事务失效？</a><br/>
+					</div>
+				
+					
+				
+			
+			
+			
+			
+			</aside>
+			</div>
+			</div>
+			</div>
+	
+			</div>
+ 	</body>
+</html>
+ <script src="http://cdn.bootcss.com/bootstrap-hover-dropdown/2.0.10/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript">
+
+		var app = new Vue({
+  el: '#app',
+  data: {
+  	datas:[],
+  	message:"",
+  	isLogin:false,
+	page:1,
+	pageSize:10,
+	navBarFixed:false,
+
+  	
+   
+  },
+  methods:{
+  
+  	get:function()
+  	{
+		 	
+  			 axios.post('http://39.98.230.52:8080/getAllArticle',{page:this.page,pageSize:this.pageSize}).then((response) => {						 														
+								 this.datas=response.data;
+						   		 
+				   	});
+  	},
+	add:function()
+	{
+		 	 this.page++;
+			 
+			 axios.post('http://39.98.230.52:8080/getAllArticle',{page:this.page,pageSize:this.pageSize}).then((response) => {	
+							var length=response.data.length;
+							if(length==0)
+							{
+								alert("别翻啦，真的一滴都没有啦");
+							}
+							for(i=0;i<length;i++)
+							{
+								
+								 this.datas.push(response.data[i]);
+							}
+				   		 
+				   	});
+	},
+	expire:function()
+	{
+		var token=$.cookie('token');				
+		if(token!=null)
+		{
+			
+			 axios.post('http://39.98.230.52:8080/user',{},{headers:{'token':token}}).then((response) => {
+			 		  var result=response.data;
+			 		  if(result=="expire")
+			 		  {
+			 		  	alert("登陆已失效，请您重新登陆！");
+			 		  	$.removeCookie('token');
+		  							$.removeCookie('user');
+		  							 window.location.href="login.html";
+			 		  }
+				   		 		  else
+				   		 		  {
+				   		 		  	 $.cookie('user',result,{ expires: 7});
+			    					  this.isLogin=true;
+							    	  this.message=result;
+				   		 		  }
+		    					 
+						   		})	
+						   		
+		}
+		else
+		{
+			this.isLogin=false;
+		}
+	},
+  	logout:function()
+  	{
+  		$.removeCookie('token');
+  		$.removeCookie('user');
+  		this.isLogin=false;
+  		
+  	},
+
+
+  },
+  	created(){
+            this.get();
+			this.expire();
+
+        },
+	
+});
+
+
+		
+		/* 	$(window).scroll(
+				function(){
+					if($(window).width()>1000)
+					{					
+						var newTop=$(window).scrollTop()+60;
+						if(newTop<70)
+						{
+							newTop=20;
+						}
+						$("#rightDaoHang").offset({top:newTop});
+					}
+				
+				}
+			); */
+			 window.addEventListener('scroll', function(){
+			 	let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
+			 	if(t>0){
+					$('.title').addClass('top2');
+					$("#rightDaoHang").addClass('top3');
+					
+				}else{
+					$('.title').removeClass('top2');
+					$("#rightDaoHang").removeClass('top3');
+				}
+			 });
+		
+	
+ 		
+ 		$(".nav a:gt(0)").hover(
+			function(){
+				$(this).css({"backgroundColor":"#e5f2ff"});
+				
+			},
+			function(){
+				$(this).css({"backgroundColor":"white"});
+				
+			}
+		)
+ 		
+		 $("#goTop").click(function(){
+            $("html,body").animate({scrollTop:0},"400");
+        });
+ 		$(function(){
+			$("#icon").hover(
+				function(){
+					$("#menu").show();
+				},
+				function(){
+					$("#menu").hide();
+				}
+			)
+		})
+ 
+
+		
+</script>
