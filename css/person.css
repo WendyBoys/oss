@@ -92,3 +92,16 @@
 				color: #4d4d4d;
 				margin-bottom: 10px;
 			}
+			#myessay a
+			{
+				font-size: 20px;
+				text-decoration: none;
+				color: #000000;
+			}
+		
+			#myessay a:hover
+			{
+				
+				color: #0084ff;
+				text-decoration: none;
+			}
