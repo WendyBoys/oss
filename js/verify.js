@@ -445,8 +445,8 @@
         refresh: function() {
         	this.randSet();
         	this.img_rand = Math.floor(Math.random() * this.options.imgName.length);			//随机的背景图片
-            this.$element.find('.verify-img-panel').css({'background': 'url(upload/'+this.options.imgName[this.img_rand]+')', 'background-size': this.setSize.img_width + ' '+ this.setSize.img_height});
-            this.$element.find('.verify-sub-block').css({'background-image': 'url(upload/'+this.options.imgName[this.img_rand]+')', 'background-size': this.setSize.img_width + ' '+ this.setSize.img_height});
+            this.$element.find('.verify-img-panel').css({'background': 'url(images/'+this.options.imgName[this.img_rand]+')', 'background-size': this.setSize.img_width + ' '+ this.setSize.img_height});
+            this.$element.find('.verify-sub-block').css({'background-image': 'url(images/'+this.options.imgName[this.img_rand]+')', 'background-size': this.setSize.img_width + ' '+ this.setSize.img_height});
         },
         
         //获取left值
