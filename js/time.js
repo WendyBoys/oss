@@ -10,7 +10,44 @@ $(document).ready(function() {
 	});
 
 	$("#makeUrl").click(function() {
-		var input = $("#input").val().trim();
+		var input = $("#input").val().toLowerCase().trim();
+		var reg = new RegExp("^((https|http|ftp|rtsp|mms)?://)" 
+			+
+			"?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" 
+			+
+			"(([0-9]{1,3}\\.){3}[0-9]{1,3}" 
+			+
+			"|" 
+			+
+			"([0-9a-z_!~*'()-]+\\.)*" 
+			+
+			"([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\\." 
+			+
+			"[a-z]{2,6})" 
+			+
+			"(:[0-9]{1,5})?" 
+			+
+			"((/?)|" 
+			+
+			"(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$");
+
+		if (!reg.test(input)) {
+			$.Toast("", "请输入合法的网址", "error", {
+				stack: false,
+				has_icon: false,
+				has_close_btn: false,
+				width: 150,
+				spacing: 0,
+				fullscreen: false,
+				position_class: "toast-center-center",
+				timeout: 1500,
+				sticky: false,
+				has_progress: false,
+				rtl: false,
+			});
+			return;
+		}
+
 		if (input == '') {
 			$.Toast("", "请输入要转换的链接", "warning", {
 				stack: false,
@@ -27,7 +64,9 @@ $(document).ready(function() {
 			});
 			return;
 		}
-		axios.get('http://47.102.196.34/bloom?long_Url=' + input).then((response) => {
+		axios.post('http://127.0.0.1:8080/bloom', {
+			long_Url: input
+		}).then((response) => {
 			if (response.data.message == 'Success') {
 				$("#url").text('url.javaweb.io/' + response.data.data);
 				$("#shortUrl").css('display', 'flex');
@@ -45,7 +84,7 @@ $(document).ready(function() {
 					rtl: false,
 				});
 			} else {
-				$.Toast("", response.data.message, "error", {
+				$.Toast("", response.data.data, "error", {
 					stack: false,
 					has_icon: false,
 					has_close_btn: false,
